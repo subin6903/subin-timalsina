@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninjas Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: rgb(163, 69, 69);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        header a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header a:hover {
+            cursor: pointer;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: white;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        nav img {
+            height: 60px;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            height: 3px;
+            width: 25px;
+            background:orange;
+            margin: 4px 0;
+        }
+
+        ul#navcontent {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        ul#navcontent li a {
+            text-decoration: none;
+            color: green;
+            font-weight: bold;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        #container1 {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        #about, #menu {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        #menu ul {
+            list-style: none;
+            padding: 0;
+            font-size: 1.1rem;
+        }
+
+        #container4 {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem;
+            flex-wrap: wrap;
+            background-color: #fff;
+        }
+
+        .product-card {
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            padding: 1rem;
+            width: 100%;
+            max-width: 250px;
+            flex: 1 1 200px;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product-card h3 {
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        /* Responsive Media Queries */
+        @media (max-width: 768px) {
+            ul#navcontent {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #f4f4f4;
+                padding: 1rem 0;
+                margin-top: 1rem;
+            }
+
+            ul#navcontent.show {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav {
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a id="top"></a>
+
+    <header>
+        <a href="#top">
+            <h1>Ninjas</h1>
+            <h1>Restaurant</h1>
+        </a>
+    </header>
+    <hr>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <img src="https://png.pngtree.com/png-vector/20230130/ourmid/pngtree-cartoon-chef-with-a-confident-pose-png-image_6574073.png" alt="Chef Logo" style="width: 120px; height: 100px;">
+        
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul id="navcontent">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- HOME -->
+    <div id="container1">
+        <div id="row1">
+            <h2>Welcome to Ninjas FoodShop</h2>
+        </div>
+        <button class="btn">ORDER NOW</button>
+        <div id="container3">
+            <div id="row2">
+                <button class="btn">Prices</button>
+            </div>
+            <div id="row3">
+                <button class="btn">Specials</button>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ABOUT SECTION -->
+    <div id="about">
+        <h1>About Us</h1>
+        <p>
+            At Ninjas Restaurant, we blend traditional Asian flavors with a modern twist.
+            Our journey started in 2015 with a passion for authentic cuisine and exceptional service.
+            Whether you’re here for a quick bite or a family dinner, we promise to deliver delicious food made with love.
+        </p>
+        <p>
+            Our chefs are trained in culinary arts from around the world and bring a unique flair to every dish.
+            We value fresh ingredients, great ambiance, and creating unforgettable dining experiences.
+        </p>
+    </div>
+
+    <hr>
+
+    <!-- MENU SECTION -->
+    <div id="menu">
+        <h1>Our Menu</h1>
+        <p>Check out our delicious offerings below!</p>
+        <ul>
+            <li>🍔 Burger - $12</li>
+            <li>🍙 Fried Rice - $18</li>
+            <li>🍗 Chicken Naan - $8</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <!-- FEATURED PRODUCTS -->
+    <h1 style="text-align: center;">Featured Products</h1>
+    <div id="container4">
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBFCimCM1wFvb3FZQOZH_j5ta4Qd2SlNj2vg&s" alt="Burger">
+            <h3>Juicy Burger</h3>
+            <button class="btn">ORDER NOW</button>
+        </div>
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPB0SshjQzi37NckUqup-HIv1ULwgFFmJExg&s" alt="Fried Rice">
+            <h3>Spicy Fried Rice</h3>
+            <button class="btn">ORDER NOW</button>
+        </div>
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKXI5Y18aqb9dC2svm5TX91NKe6x4DFgLA4g&s" alt="Chicken Naan">
+            <h3>Chicken Naan Wrap</h3>
+            <button class="btn">ORDER NOW</button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        Copyright © 2020-2025 Ninjas FoodShop
+        All Rights are reserved
+    </footer>
+
+</body>
+</html>
